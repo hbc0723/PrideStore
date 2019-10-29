@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .thumb {
+            flex: 50%;
+            padding: 5px;
+        }
+        body {
+  		font-family: "Merriweather";
+			}
+      #banner{
+        width: 60%;
+          position: center;
+      }
+    </style>
+
+<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <title> Product Page </title>
+
+</head>
+<body>
+<div class = "header">
+  	<img id="banner" src="banner.png">
+  </div>
+
+ <h1> Buy this: {{ product.product_name }}</h1>
+ <pre id="product">{{ product.product_price }}</pre>
+
+<!-- attempt 2 -->
+<div class= "p" style="width:100px">
+    <img class="slide" src="{{MEDIA_URL}}{{ product.photo1.url }}">
+    <img class="slide" src="{{MEDIA_URL}}{{ product.photo2.url }}" style="display: none">
+
+  <div class="row">
+    <div class="thumb">
+      <img src="{{MEDIA_URL}}{{ product.photo1.url }}" style="width:100px;cursor:pointer" onclick="currentDiv(1)">
+    </div>
+    <div class="thumb">
+      <img src="{{MEDIA_URL}}{{ product.photo2.url }}" style="width:100px;cursor:pointer" onclick="currentDiv(2)">
+    </div>
+  </div>
+</div>
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  //var dots = document.getElementsByClassName("demo"); ** can style to make opacity on/off
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  //for (i = 0; i < dots.length; i++) {
+ //   dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  //}
+  x[slideIndex-1].style.display = "block";
+  //dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+</body>
+</html>
+
