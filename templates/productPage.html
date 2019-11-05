@@ -46,7 +46,28 @@
   </div>
 </div>
 
+<br>
+<br>
+
+<div id ="size">
+    Select your size:
+    <br>
+    <form>
+        <input type = radio name="size" value="small"> Small
+        <input type = radio name="size" value="medium"> Medium
+        <input type = radio name="size" value="large"> Large
+    </form>
+    <br>
+    <button onclick= cartAlert()> Add To Cart </button>
+</div>
+
+
+
 <script>
+
+    function cartAlert() {
+        alert("Shopping cart coming soon!");
+    }
 function currentDiv(n) {
   showDivs(slideIndex = n);
 }
@@ -58,7 +79,6 @@ function showDivs(n) {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-
   x[slideIndex-1].style.display = "block";
 }
 </script>
