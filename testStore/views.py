@@ -4,7 +4,6 @@ from .models import Product
 from django.template import loader
 from django.shortcuts import render
 
-
 # Create your views here.
 
 def index(request):

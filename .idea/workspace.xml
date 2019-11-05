@@ -16,6 +16,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -23,9 +24,14 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/media" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\PythonProjects\media\media" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Owner\PythonProjects\static" />
     </key>
@@ -83,7 +89,7 @@
       <workItem from="1570719183898" duration="19080000" />
       <workItem from="1571278912709" duration="446000" />
       <workItem from="1571332511284" duration="3527000" />
-      <workItem from="1572222917746" duration="19310000" />
+      <workItem from="1572222917746" duration="31240000" />
     </task>
     <servers />
   </component>

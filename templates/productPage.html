@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <style>
         .row {
@@ -14,10 +15,7 @@
         body {
   		font-family: "Merriweather";
 			}
-      #banner{
-        width: 60%;
-          position: center;
-      }
+
     </style>
 
 <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
@@ -26,11 +24,12 @@
 </head>
 <body>
 <div class = "header">
-  	<img id="banner" src="banner.png">
+    <img src="{{ MEDIA_URL }}/media/media/banner.png" style="max-height: 200px">
+
   </div>
 
- <h1> Buy this: {{ product.product_name }}</h1>
- <pre id="product">{{ product.product_price }}</pre>
+ <h1> {{ product.product_name }}</h1>
+ <h2 id="product">{{ product.product_price }}</h2>
 
 <!-- attempt 2 -->
 <div class= "p" style="width:100px">
@@ -52,8 +51,8 @@ function currentDiv(n) {
   showDivs(slideIndex = n);
 }
 function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("slide");
+  let i;
+  let x = document.getElementsByClassName("slide");
   //var dots = document.getElementsByClassName("demo"); ** can style to make opacity on/off
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
